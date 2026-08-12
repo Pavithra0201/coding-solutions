@@ -49,15 +49,15 @@ Output: false
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-08-12T18:22:10.505Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 7.7 MB (beats 82.69%)  
+**Submitted:** 2026-08-12T18:22:31.533Z  
 
 ```cpp
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-        if (n==0) return false;
+        if (n<=0) return false;
 
         while(n>0)
         {
