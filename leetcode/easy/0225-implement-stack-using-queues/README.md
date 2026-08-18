@@ -54,9 +54,9 @@ myStack.empty(); // return False
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.8 MB  
-**Submitted:** 2026-08-18T15:40:08.275Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 10.2 MB (beats 18.85%)  
+**Submitted:** 2026-08-18T15:42:57.683Z  
 
 ```cpp
 class MyStack {
@@ -84,8 +84,10 @@ public:
     
     int pop() {
         if (q1.empty()) return -1;
-        return q1.front();
+        int x= q1.front();
         q1.pop();
+
+        return x;
       
         
     }
