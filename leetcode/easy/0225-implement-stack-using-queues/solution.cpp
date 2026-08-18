@@ -23,8 +23,10 @@ public:
     
     int pop() {
         if (q1.empty()) return -1;
-        return q1.front();
+        int x= q1.front();
         q1.pop();
+
+        return x;
       
         
     }
