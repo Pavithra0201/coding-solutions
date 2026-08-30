@@ -4,6 +4,7 @@ public:
         if (s.length()==1) return 1;
          int ans=-1;
         int j=0;
+        
         for (int i=1;i<s.length();i++)
         {
             
@@ -14,10 +15,15 @@ public:
                 ans=max(curr,ans);
                 j++;
             }
-                
+
+            ans=max(ans,(i-j)+1);
+
+            
+              
             
         }
 
+        
         return ans;
         
         
