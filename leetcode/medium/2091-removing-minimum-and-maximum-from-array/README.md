@@ -64,7 +64,7 @@ We can remove it with 1 deletion.
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 92.1 MB (beats 58.82%)  
-**Submitted:** 2026-08-30T17:10:53.936Z  
+**Submitted:** 2026-08-30T18:33:21.655Z  
 
 ```cpp
 class Solution {
