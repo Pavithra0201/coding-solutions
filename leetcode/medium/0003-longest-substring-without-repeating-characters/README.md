@@ -47,8 +47,8 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-08-30T17:48:43.722Z  
+**Memory:** 7.9 MB  
+**Submitted:** 2026-08-30T17:54:39.652Z  
 
 ```cpp
 class Solution {
@@ -57,6 +57,7 @@ public:
         if (s.length()==1) return 1;
          int ans=-1;
         int j=0;
+        
         for (int i=1;i<s.length();i++)
         {
             
@@ -67,10 +68,15 @@ public:
                 ans=max(curr,ans);
                 j++;
             }
-                
+
+            ans=max(ans,(i-j)+1);
+
+            
+              
             
         }
 
+        
         return ans;
         
         
