@@ -53,8 +53,8 @@ Return `true` if it is possible to construct such an array, otherwise, return `f
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8 MB  
-**Submitted:** 2026-09-02T10:05:14.609Z  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-09-02T10:05:07.221Z  
 
 ```cpp
 class Solution {
