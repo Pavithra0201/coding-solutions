@@ -52,15 +52,15 @@ Return `true` if it is possible to construct such an array, otherwise, return `f
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 30.4 MB (beats 36.43%)  
-**Submitted:** 2026-09-02T10:03:43.126Z  
+**Runtime:** 0 ms  
+**Memory:** 8 MB  
+**Submitted:** 2026-09-02T10:05:14.609Z  
 
 ```cpp
 class Solution {
 public:
     bool uniformArray(vector<int>& nums1) {
-        vector<int>nums2;
+       
         
 
         for (int i=1;i<nums1.size();i++)
@@ -68,7 +68,7 @@ public:
             int j=i-1;
             if (nums1[i] %2  ==0 || (nums1[i]-nums1[j]) %2 ==0)
                 continue;
-            else if (nums1[i] %2  !=0 || (nums1[i]-nums2[j]) %2 !=0)
+            else if (nums1[i] %2  !=0 || (nums1[i]-nums1[j]) %2 !=0)
                 continue;
             else
                 return false;
