@@ -52,9 +52,9 @@ Return `true` if it is possible to construct such an array, otherwise, return `f
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-02T10:05:07.221Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 30.4 MB (beats 7.23%)  
+**Submitted:** 2026-09-02T10:05:19.939Z  
 
 ```cpp
 class Solution {
