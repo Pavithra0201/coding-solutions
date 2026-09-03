@@ -53,8 +53,8 @@ Return `true` if it is possible to construct such an array, otherwise, return `f
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 30.4 MB (beats 7.23%)  
-**Submitted:** 2026-09-02T10:05:19.939Z  
+**Memory:** 30.5 MB (beats 7.17%)  
+**Submitted:** 2026-09-03T09:55:34.998Z  
 
 ```cpp
 class Solution {
@@ -63,17 +63,7 @@ public:
        
         
 
-        for (int i=1;i<nums1.size();i++)
-        {
-            int j=i-1;
-            if (nums1[i] %2  ==0 || (nums1[i]-nums1[j]) %2 ==0)
-                continue;
-            else if (nums1[i] %2  !=0 || (nums1[i]-nums1[j]) %2 !=0)
-                continue;
-            else
-                return false;
-
-        }
+       
 
         return true;
         
