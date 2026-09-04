@@ -15,7 +15,7 @@ public:
             maxi=*max_element(nums.begin(),nums.begin()+i);
             mini=*min_element(nums.begin()+i,nums.end());
 
-            if (maxi - mini < k)
+            if (maxi - mini <= k)
                 return i;
 
         }
