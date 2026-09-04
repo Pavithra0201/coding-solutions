@@ -67,9 +67,9 @@ At index 0, the instability score is `0 - 0 = 0`, which is less than or equal to
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-04T17:54:44.028Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 30.2 MB (beats 94.42%)  
+**Submitted:** 2026-09-04T17:55:52.500Z  
 
 ```cpp
 class Solution {
@@ -89,7 +89,7 @@ public:
             maxi=*max_element(nums.begin(),nums.begin()+i);
             mini=*min_element(nums.begin()+i,nums.end());
 
-            if (maxi - mini < k)
+            if (maxi - mini <= k)
                 return i;
 
         }
