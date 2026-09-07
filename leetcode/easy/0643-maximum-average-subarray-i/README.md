@@ -38,9 +38,9 @@ Output: 5.00000
 ## Solution
 
 **Language:** C++  
-**Runtime:** 3 ms (beats 36.59%)  
-**Memory:** 113.6 MB (beats 99.46%)  
-**Submitted:** 2026-09-07T12:10:08.312Z  
+**Runtime:** 0 ms  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-09-07T12:10:49.564Z  
 
 ```cpp
 class Solution {
@@ -51,15 +51,15 @@ public:
 
         for (int i=0;i<k;i++)
         {
-            sum+=nums[i];
+            sum=sum+nums[i];
         }
 
         double maxSum=sum;
 
         for (int i=k;i<nums.size();i++)
         {
-            sum+= nums[i];
-            sum-= nums[i-k];
+            sum=sum+nums[i];
+            sum=sum-nums[i-k];
 
             maxSum=max(sum,maxSum);
         
