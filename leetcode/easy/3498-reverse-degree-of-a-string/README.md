@@ -56,9 +56,9 @@ The reverse degree is `1 + 52 + 3 + 104 = 160`.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 4 ms (beats 9.52%)  
+**Runtime:** 1 ms (beats 24.25%)  
 **Memory:** 9.7 MB (beats 78.39%)  
-**Submitted:** 2026-09-20T17:38:03.159Z  
+**Submitted:** 2026-09-20T17:38:32.545Z  
 
 ```cpp
 class Solution {
