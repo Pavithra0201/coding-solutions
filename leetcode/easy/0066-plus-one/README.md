@@ -54,25 +54,34 @@ Thus, the result should be [1,0].
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 11.6 MB (beats 25.82%)  
-**Submitted:** 2026-09-21T04:08:41.526Z  
+**Runtime:** 0 ms  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-09-21T04:17:59.871Z  
 
 ```cpp
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        int size=digits.size();
-      
-        for(int i=size-1;i>=0;i--)
-        {
+        int i=digits.size()-1;
+        
+
             if (digits[i] <9)
                 {digits[i]+=1;
                 return digits;
                 }
-            digits[i]=0;
-        }
-        digits.insert(digits.begin(), 1);
+            else
+            {
+                while(i>=0 && digits[i]>=9)
+                    digits[i]=0;
+                    i--;
+            }
+
+            digits.insert(digits.begin(),1);
+            
+            return digits;
+            
+            
+      
     return digits;
 
         
