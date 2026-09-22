@@ -67,29 +67,34 @@ At index 0, the instability score is `0 - 0 = 0`, which is less than or equal to
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-05T16:18:30.345Z  
+**Runtime:** 5 ms (beats 73.40%)  
+**Memory:** 202.6 MB (beats 71.34%)  
+**Submitted:** 2026-09-22T10:39:04.833Z  
 
 ```cpp
 class Solution {
 public:
     int firstStableIndex(vector<int>& nums, int k) {
-        int min=0;
-        int max=0;
+        int min = nums[0];
+int max = nums[0];
 
-        for (int i=0;i<nums.size();i++)
-        {
-            max=*max_element(nums.begin(),nums.begin()+i);
-            min=*min_element(nums.begin()+i,nums.end());
+vector<int> suffixMin(nums.size());
+suffixMin[nums.size() - 1] = nums.back();
 
-            if (max-min <=k)
-                return i;
+for (int i = nums.size() - 2; i >= 0; i--) {
+    suffixMin[i] = std::min(suffixMin[i + 1], nums[i]);
+}
 
-        }
+for (int i = 0; i < nums.size(); i++) {
+    max = std::max(max, nums[i]);
 
-        return -1;
-        
+    min = suffixMin[i];
+
+    if (max - min <= k)
+        return i;
+}
+
+return -1;
     }
 };
 ```
