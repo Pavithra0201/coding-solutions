@@ -1,20 +1,25 @@
 class Solution {
 public:
     int firstStableIndex(vector<int>& nums, int k) {
-        int min=0;
-        int max=0;
+        int min = nums[0];
+int max = nums[0];
 
-        for (int i=0;i<nums.size();i++)
-        {
-            max=*max_element(nums.begin(),nums.begin()+i);
-            min=*min_element(nums.begin()+i,nums.end());
+vector<int> suffixMin(nums.size());
+suffixMin[nums.size() - 1] = nums.back();
 
-            if (max-min <=k)
-                return i;
+for (int i = nums.size() - 2; i >= 0; i--) {
+    suffixMin[i] = std::min(suffixMin[i + 1], nums[i]);
+}
 
-        }
+for (int i = 0; i < nums.size(); i++) {
+    max = std::max(max, nums[i]);
 
-        return -1;
-        
+    min = suffixMin[i];
+
+    if (max - min <= k)
+        return i;
+}
+
+return -1;
     }
 };
