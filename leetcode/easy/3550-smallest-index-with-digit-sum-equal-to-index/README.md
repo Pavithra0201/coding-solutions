@@ -54,9 +54,9 @@ If no such index exists, return `-1`.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-09-24T12:15:56.778Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 31 MB (beats 52.36%)  
+**Submitted:** 2026-09-24T12:16:11.934Z  
 
 ```cpp
 class Solution {
