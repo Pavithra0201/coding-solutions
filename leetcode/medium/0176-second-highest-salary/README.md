@@ -69,15 +69,15 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 86 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-24T12:54:37.794Z  
+**Runtime:** 298 ms (beats 60.37%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-24T12:56:09.961Z  
 
 ```sql
 SELECT (
     SELECT salary
     FROM (
-        SELECT salary,
+        SELECT distinct(salary),
                DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
         FROM Employee
     ) AS ranked
