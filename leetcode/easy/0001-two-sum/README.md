@@ -52,30 +52,30 @@ Output: [0,1]
 
 ## Solution
 
-**Language:** Python  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 20.4 MB (beats 40.74%)  
-**Submitted:** 2026-08-17T18:05:59.993Z  
+**Language:** C++  
+**Runtime:** 2 ms (beats 73.35%)  
+**Memory:** 14.8 MB (beats 44.77%)  
+**Submitted:** 2026-10-19T05:32:52.125Z  
 
-```py
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        map={}
+```cpp
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> hash;
 
+        for(int i=0;i<nums.size();i++)
+        {
+            int comp= target-nums[i];
 
+            if (hash.count(comp))
+                return {hash[comp],i};
+            hash[nums[i]]=i;
+        }
+        return {};
         
-
-        for i in range(len(nums)):
-            comp=target-nums[i]
-
-            if comp in map:
-                return [map[comp],i]
-            
-            map[nums[i]]=i
-
-        return []
-
         
+    }
+};
 ```
 
 ---
