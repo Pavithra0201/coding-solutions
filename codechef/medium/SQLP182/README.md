@@ -28,11 +28,11 @@
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T06:55:19.430Z  
+**Submitted:** 2026-10-23T06:57:51.393Z  
 
 ```sql
 -- your code goes here
-select singer_name 
+select singer_name
 from singer
 where singer_name like 'A%';
 ```
