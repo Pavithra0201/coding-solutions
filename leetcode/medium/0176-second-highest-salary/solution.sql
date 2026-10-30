@@ -1,9 +1,12 @@
-SELECT (
-    SELECT salary
-    FROM (
-        SELECT distinct(salary),
-               DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
-        FROM Employee
-    ) AS ranked
-    WHERE rnk = 2
-) AS SecondHighestSalary;
+# Write your MySQL query statement below
+with ranked as(
+select salary,
+    DENSE_RANK() OVER 
+    (order by salary desc)
+    as rnk
+
+from employee)
+
+select max(salary) as SecondHighestSalary
+ from ranked
+where rnk=2;
