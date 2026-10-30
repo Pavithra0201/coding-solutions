@@ -69,9 +69,9 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 340 ms (beats 23.86%)  
+**Runtime:** 308 ms (beats 43.98%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-10-30T06:53:35.904Z  
+**Submitted:** 2026-10-30T06:58:32.742Z  
 
 ```sql
 # Write your MySQL query statement below
@@ -83,7 +83,7 @@ select salary,
 
 from employee)
 
-select max(salary) as SecondHighestSalary
+select min(salary) as SecondHighestSalary
  from ranked
 where rnk=2;
 
