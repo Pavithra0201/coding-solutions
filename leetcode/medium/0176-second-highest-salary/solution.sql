@@ -7,6 +7,6 @@ select salary,
 
 from employee)
 
-select max(salary) as SecondHighestSalary
+select min(salary) as SecondHighestSalary
  from ranked
 where rnk=2;
