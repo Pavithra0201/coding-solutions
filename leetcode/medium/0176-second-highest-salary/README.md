@@ -69,20 +69,24 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 298 ms (beats 60.37%)  
+**Runtime:** 340 ms (beats 23.86%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-24T12:56:09.961Z  
+**Submitted:** 2026-10-30T06:53:35.904Z  
 
 ```sql
-SELECT (
-    SELECT salary
-    FROM (
-        SELECT distinct(salary),
-               DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
-        FROM Employee
-    ) AS ranked
-    WHERE rnk = 2
-) AS SecondHighestSalary;
+# Write your MySQL query statement below
+with ranked as(
+select salary,
+    DENSE_RANK() OVER 
+    (order by salary desc)
+    as rnk
+
+from employee)
+
+select max(salary) as SecondHighestSalary
+ from ranked
+where rnk=2;
+
 ```
 
 ---
