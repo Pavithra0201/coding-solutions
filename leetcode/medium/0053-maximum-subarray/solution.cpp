@@ -8,7 +8,7 @@ public:
         {
            
             sum=sum+nums[i];
-            maxi=max(sum,nums[i]);
+            maxi=max(sum,maxi);
            if (sum <0)
                 sum=0;
 
