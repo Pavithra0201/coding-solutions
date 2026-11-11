@@ -8,6 +8,8 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 
  
 
+Original
+C++
  **Example 1:** 
 
  **Input:**  nums = [3,0,1]
@@ -61,9 +63,9 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 ## Solution
 
 **Language:** C++  
-**Runtime:** 3 ms (beats 21.27%)  
-**Memory:** 21.7 MB (beats 92.39%)  
-**Submitted:** 2026-10-22T11:12:32.441Z  
+**Runtime:** 4 ms (beats 19.42%)  
+**Memory:** 21.8 MB (beats 31.58%)  
+**Submitted:** 2026-11-11T06:45:42.636Z  
 
 ```cpp
 class Solution {
@@ -71,14 +73,12 @@ public:
     int missingNumber(vector<int>& nums) {
         int n=nums.size();
         sort(nums.begin(),nums.end());
-        
 
         for (int i=0;i<n;i++)
         {
             if (nums[i]!=i)
-                return nums[i]-1;
+                return i;
         }
-
         return nums[n-1]+1;
         
     }
