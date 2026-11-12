@@ -5,23 +5,10 @@ public:
         if(s.size()!=t.size())
             return false;
 
-        for (int i=0;i<s.size();i++)
-        {
-            freq[s[i]]++;
-        }
+       sort(s.begin(),s.end());
+       sort(t.begin(),t.end());
 
-        for (int i=0;i<t.size();i++)
-        {
-            freq[t[i]]--;
-        }
-
-        for (auto it:freq)
-        {
-            if (it.second!=0)
-                return false;
-        }
-
-        return true;
+       return s==t;
         
     }
 };
