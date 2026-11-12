@@ -36,9 +36,9 @@ C++
 ## Solution
 
 **Language:** C++  
-**Runtime:** 3 ms (beats 43.85%)  
-**Memory:** 9.9 MB (beats 21.72%)  
-**Submitted:** 2026-11-12T07:17:56.802Z  
+**Runtime:** 5 ms (beats 26.60%)  
+**Memory:** 9.6 MB (beats 90.13%)  
+**Submitted:** 2026-11-12T07:19:14.685Z  
 
 ```cpp
 class Solution {
@@ -48,23 +48,10 @@ public:
         if(s.size()!=t.size())
             return false;
 
-        for (int i=0;i<s.size();i++)
-        {
-            freq[s[i]]++;
-        }
+       sort(s.begin(),s.end());
+       sort(t.begin(),t.end());
 
-        for (int i=0;i<t.size();i++)
-        {
-            freq[t[i]]--;
-        }
-
-        for (auto it:freq)
-        {
-            if (it.second!=0)
-                return false;
-        }
-
-        return true;
+       return s==t;
         
     }
 };
