@@ -36,21 +36,35 @@ C++
 ## Solution
 
 **Language:** C++  
-**Runtime:** 5 ms (beats 26.60%)  
-**Memory:** 9.6 MB (beats 90.13%)  
-**Submitted:** 2026-11-12T07:15:25.228Z  
+**Runtime:** 3 ms (beats 43.85%)  
+**Memory:** 9.9 MB (beats 21.72%)  
+**Submitted:** 2026-11-12T07:17:56.802Z  
 
 ```cpp
 class Solution {
 public:
     bool isAnagram(string s, string t) {
+        unordered_map<char,int> freq;
         if(s.size()!=t.size())
             return false;
 
-        sort(s.begin(),s.end());
-        sort(t.begin(),t.end());
+        for (int i=0;i<s.size();i++)
+        {
+            freq[s[i]]++;
+        }
 
-        return s==t;
+        for (int i=0;i<t.size();i++)
+        {
+            freq[t[i]]--;
+        }
+
+        for (auto it:freq)
+        {
+            if (it.second!=0)
+                return false;
+        }
+
+        return true;
         
     }
 };
