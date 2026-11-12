@@ -62,9 +62,9 @@ Hence, we return `3`.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8 MB  
-**Submitted:** 2026-11-12T07:05:06.174Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 27.7 MB (beats 93.66%)  
+**Submitted:** 2026-11-12T07:05:59.869Z  
 
 ```cpp
 class Solution {
@@ -73,6 +73,7 @@ public:
         int n=nums.size();
         int inc=1;
         int dec=1;
+        int ans=1;
         for (int i=1;i<n;i++)
         {
             if (nums[i] >nums[i-1])
@@ -91,10 +92,10 @@ public:
                 inc=1;
                 dec=1;
             }
-
+            ans= max(ans,max(inc,dec));
         }
 
-        int ans= max(ans,max(inc,dec));
+        
         return ans;
         
     }
