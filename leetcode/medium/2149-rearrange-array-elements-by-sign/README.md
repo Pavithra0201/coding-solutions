@@ -57,9 +57,9 @@ It is not required to do the modifications in-place.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-11-13T14:37:17.752Z  
+**Runtime:** 5 ms (beats 75.04%)  
+**Memory:** 128.2 MB (beats 70.38%)  
+**Submitted:** 2026-11-13T14:37:22.699Z  
 
 ```cpp
 class Solution {
