@@ -57,15 +57,16 @@ It is not required to do the modifications in-place.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 6 ms (beats 67.31%)  
-**Memory:** 127.8 MB (beats 99.68%)  
-**Submitted:** 2026-11-13T14:36:08.465Z  
+**Runtime:** 0 ms  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-11-13T14:37:17.752Z  
 
 ```cpp
 class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
-        vector<int>ans(nums.size());
+        int n=nums.size();
+        vector<int>ans(n);
         int pos=0;
         int neg=1;
         
