@@ -48,13 +48,15 @@ Output: 3
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-11-13T15:32:55.814Z  
+**Memory:** 8 MB  
+**Submitted:** 2026-11-13T15:36:45.991Z  
 
 ```cpp
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
+        int n=nums.size();
+        if (n<=1) return n;
         sort(nums.begin(),nums.end());
         int ans=1;
         for (int i=1;i<nums.size();i++)
