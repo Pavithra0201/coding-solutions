@@ -9,8 +9,6 @@ public:
             if (!set.count(s[right]))
             {
                 set.insert(s[right]);
-                
-
                 maxLen=max(maxLen,right-left+1);
                 right++;
 
