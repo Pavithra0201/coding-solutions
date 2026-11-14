@@ -48,9 +48,9 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 ## Solution
 
 **Language:** C++  
-**Runtime:** 358 ms (beats 7.11%)  
-**Memory:** 81.4 MB (beats 21.05%)  
-**Submitted:** 2026-11-14T17:50:00.923Z  
+**Runtime:** 0 ms  
+**Memory:** 7.9 MB  
+**Submitted:** 2026-11-14T17:50:31.464Z  
 
 ```cpp
 class Solution {
@@ -64,8 +64,6 @@ public:
             if (!set.count(s[right]))
             {
                 set.insert(s[right]);
-                
-
                 maxLen=max(maxLen,right-left+1);
                 right++;
 
