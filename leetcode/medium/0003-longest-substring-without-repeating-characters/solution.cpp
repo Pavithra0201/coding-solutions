@@ -6,7 +6,7 @@ public:
         int left=0,right=0,maxLen=0;
         while(right < s.size())
         {
-            if (!set.count(s[right]))
+            if (set.find(s[right]) == set.end())
             {
                 set.insert(s[right]);
                 maxLen=max(maxLen,right-left+1);
