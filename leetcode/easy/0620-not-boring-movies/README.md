@@ -60,9 +60,9 @@ We have three movies with odd-numbered IDs: 1, 3, and 5. The movie with ID = 3 i
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 318 ms  
-**Memory:** 0B  
-**Submitted:** 2026-11-25T05:58:13.648Z  
+**Runtime:** 400 ms (beats 53.56%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-11-25T05:58:18.727Z  
 
 ```sql
 /* Write your PL/SQL query statement below */
