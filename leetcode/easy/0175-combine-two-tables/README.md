@@ -1,4 +1,4 @@
-# Combine Two Tables
+# Q1. Combine Two Tables
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
@@ -81,9 +81,9 @@ addressId = 1 contains information about the address of personId = 2.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 750 ms (beats 5.16%)  
+**Runtime:** 320 ms (beats 99.36%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-10-30T06:46:57.376Z  
+**Submitted:** 2026-11-25T05:56:29.882Z  
 
 ```sql
 # Write your MySQL query statement below
